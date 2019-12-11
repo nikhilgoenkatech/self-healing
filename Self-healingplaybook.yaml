@@ -1,5 +1,5 @@
 name: autoremediaton playbook
-  hosts: localhost
+  hosts: All
   vars:
     #tenanturl: https://xxx.live.dynatrace.com
     #apitoken: xxx
