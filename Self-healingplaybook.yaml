@@ -6,7 +6,7 @@
     uri:
      url: "{{dtproblemURL}}"
      method: GET
-     body_format: json
+     register: json
      debug:
       msg: "There is problem with service"
     when:
