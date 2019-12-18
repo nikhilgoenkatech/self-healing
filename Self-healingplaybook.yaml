@@ -6,11 +6,11 @@
     uri:
      url: "{{dtproblemURL}}"
      method: GET
-     register: result
+     register: json
      debug:
       msg: "There is problem with service"
     when:
-      (result.totalOpenProblemsCount == "1")    
+      (json.totalOpenProblemsCount == "1")    
 
   - name: Starting easytravel
     service:
