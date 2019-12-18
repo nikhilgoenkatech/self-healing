@@ -1,10 +1,7 @@
 ---
 - name: Selfhealing playbook
   hosts: All
-  vars:
-    tenanturl: https://stg99002.live.dynatrace.com
-    apitoken: Ur8ti8_9SLWYpfXSTDNgH
-    dtproblemURL: "https://stg99002.live.dynatrace.com/api/v1/problem/status"
+  
  tasks:
   - name: read JSON of problem status
     url: "{{dtproblemURL}}"
