@@ -6,7 +6,7 @@
     uri:
      url: "{{dtproblemURL}}"
      method: GET
-     register: "result"
+     register: result
      debug:
       msg: "There is problem with service{{result}}"
       
