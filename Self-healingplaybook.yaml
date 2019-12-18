@@ -8,9 +8,8 @@
      method: GET
      register: "result"
      debug:
-      msg: "There is problem with service"
-    when:
-      (result.totalOpenProblemsCount == "1")    
+      msg: "There is problem with service{{result}}"
+      
 
   - name: Starting easytravel
     service:
