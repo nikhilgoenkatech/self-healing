@@ -3,9 +3,11 @@
   
   tasks:
   - name: read JSON of problem status
-    url: "{{dtproblemURL}}"
-    method: Get
-    debug:
+    uri:
+     url: "{{dtproblemURL}}"
+     method: GET
+     body_format: json
+     debug:
       msg: "There is problem with service"
     when:
       (result.totalOpenProblemsCount == "1")    
