@@ -1,8 +1,7 @@
----
-- name: Selfhealing playbook
-  hosts: All
+- name: selfhealing
+  hosts: all
   
- tasks:
+  tasks:
   - name: read JSON of problem status
     url: "{{dtproblemURL}}"
     method: Get
@@ -11,8 +10,7 @@
     when:
       (result.totalOpenProblemsCount == "1")    
 
- - name: Starting easytravel
+  - name: Starting easytravel
     service:
        name: easytravel
-       state: started 
-	  
+       state: started
