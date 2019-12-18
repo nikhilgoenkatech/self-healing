@@ -10,7 +10,7 @@
      debug:
       msg: "There is problem with service"
     when:
-      (totalOpenProblemsCount == "1")    
+      result[totalOpenProblemsCount == "1"]   
 
   - name: Starting easytravel
     service:
